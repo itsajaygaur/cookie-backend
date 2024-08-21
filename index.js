@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken')
 const JWT_SECRET = 'secret'
 
 app.use(express.json())
+
 app.use(cors({
 	origin: true,
 	credentials: true
