@@ -26,7 +26,7 @@ app.post('/login', (req, res) => {
 		httpOnly: true,
 		sameSite: 'none',
 		secure: true,
-		domain: 'cookie-frontend-nu.vercel.app'
+		domain: 'vercel.app'
 	})
 	return res.json({success: true, message: 'Login successful'})
 })
