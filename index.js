@@ -26,9 +26,9 @@ app.post('/login', (req, res) => {
 		httpOnly: true,
 		sameSite: 'none',
 		secure: true,
-		domain: 'vercel.app'
+		// domain: 'vercel.app'
 	})
-	return res.json({success: true, message: 'Login successful'})
+	return res.json({success: true, message: 'Login successful', data: token})
 })
 
 app.get('/profile', (req, res) => {
