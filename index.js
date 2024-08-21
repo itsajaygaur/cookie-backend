@@ -24,7 +24,8 @@ app.post('/login', (req, res) => {
 	res.cookie('token', token, {
 		maxAge: 900000,
 		httpOnly: true,
-		sameSite: 'none'
+		sameSite: 'none',
+		secure: true
 	})
 	return res.json({success: true, message: 'Login successful'})
 })
