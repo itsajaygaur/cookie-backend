@@ -23,7 +23,8 @@ app.post('/login', (req, res) => {
 	const token = jwt.sign({user: 'ajay'}, JWT_SECRET)
 	res.cookie('token', token, {
 		maxAge: 900000,
-		httpOnly: true
+		httpOnly: true,
+		sameSite: 'none'
 	})
 	return res.json({success: true, message: 'Login successful'})
 })
