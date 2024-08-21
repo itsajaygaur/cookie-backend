@@ -25,7 +25,8 @@ app.post('/login', (req, res) => {
 		maxAge: 900000,
 		httpOnly: true,
 		sameSite: 'none',
-		secure: true
+		secure: true,
+		domain: '.vercel.app'
 	})
 	return res.json({success: true, message: 'Login successful'})
 })
