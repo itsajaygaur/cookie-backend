@@ -32,8 +32,9 @@ app.post('/login', (req, res) => {
 
 app.get('/profile', (req, res) => {
 	try {
-		const token = req.cookies.token
-		console.log('cookies -> ',req.cookies.token)
+		const bearerToken = req.headers.authorization
+		const token = bearerToken.split(' ')[1]
+		console.log('token -> ', token)
 		if (!token) {
 			return res.json({success: false, error: 'No token'})
 			
