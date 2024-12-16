@@ -10,11 +10,11 @@ const JWT_SECRET = 'secret'
 const app = express()
 const server = http.createServer(app)
 
-app.use(express.json())
 app.use(cors({
   origin: 'http://abc.com',
   credentials: true
 }))
+app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
 
