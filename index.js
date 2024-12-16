@@ -17,7 +17,7 @@ const io = new Server(server, {
 
 app.use(express.json())
 app.use(cors({
-  origin: 'http://localhost:5000,https://*.awsapprunner.com,https://staginga360h.com',
+  origin: 'http://abc.com',
   credentials: true
 }))
 app.use(express.urlencoded({extended: true}))
